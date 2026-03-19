@@ -35,13 +35,10 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /HappyEnglishCenter
 
-      - name: Copy public assets into basePath output dir
-        run: cp -r public/. out/HappyEnglishCenter/
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out/HappyEnglishCenter
+          path: ./out
 
   deploy:
     environment:
