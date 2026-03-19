@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="308"
+     viewBox="0 0 1000 257"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">Happy English Center logo</title>
+  <desc id="desc">Vector logo for Happy English Center with a burgundy rounded rectangle, white lowercase h, gray word happy, and gray subtitle English Center.</desc>
+
+  <defs>
+    <style>
+      .brand-box { fill: #6f4441; }
+      .brand-main { fill: #ffffff; }
+      .brand-gray { fill: #98908e; }
+      .word {
+        font-family: "Avenir Next", "Montserrat", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 300;
+        letter-spacing: -2px;
+      }
+      .sub {
+        font-family: "Avenir Next", "Montserrat", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 300;
+        letter-spacing: -1px;
+      }
+    </style>
+  </defs>
+
+  <!-- Icon block -->
+  <rect class="brand-box" x="2" y="10" width="489" height="171" rx="20" ry="20"/>
+
+  <!-- Large h -->
+  <text class="brand-main word"
+        x="366"
+        y="176"
+        font-size="215">h</text>
+
+  <!-- happy -->
+  <text class="brand-gray word"
+        x="503"
+        y="180"
+        font-size="182">appy</text>
+
+  <!-- subtitle -->
+  <text class="brand-gray sub"
+        x="0"
+        y="252"
+        font-size="72">ENGLISH CENTER</text>
+</svg>
