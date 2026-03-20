@@ -23,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <head>
-        <link rel="preload" as="image" href="/HappyEnglishCenter/images/background.webp" fetchPriority="high" />
-        <link rel="preload" as="image" href="/HappyEnglishCenter/images/rating.webp" />
+        <link rel="preload" as="image" href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/background.webp`} fetchPriority="high" />
+        <link rel="preload" as="image" href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/rating.webp`} />
       </head>
       <body className={`${inter.variable} antialiased bg-background text-foreground`}>
         <LanguageProvider>
