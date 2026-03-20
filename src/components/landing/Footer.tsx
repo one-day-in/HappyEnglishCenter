@@ -39,7 +39,7 @@ export default function Footer() {
         {/* Brand column */}
         <div className="space-y-5 sm:col-span-2 lg:col-span-1">
           <Link href="/" aria-label="Home">
-            <img src={`${BP}/images/logo.svg`} alt="Happy English Center" className="h-8 w-auto brightness-0 invert opacity-90" />
+            <img src={`${BP}/images/logo.svg`} alt="Happy English Center" className="h-8 w-auto opacity-90" />
           </Link>
           <p className="text-sm leading-relaxed text-white/40 max-w-[220px]">{t.footer.tagline}</p>
           <p className="text-xs text-white/25 uppercase tracking-[0.12em]">{t.footer.est}</p>
