@@ -21,8 +21,9 @@ export default function FaqSection() {
       {/* Decorative photo — right side, desktop only */}
       <div aria-hidden="true" className="absolute right-0 top-0 bottom-0 w-64 xl:w-80 hidden lg:block pointer-events-none">
         <img
-          src={`${BP}/images/faq.jpg`}
+          src={`${BP}/images/faq.webp`}
           alt=""
+          loading="lazy"
           className="w-full h-full object-cover"
           style={{ opacity: 0.18, borderRadius: '2rem 0 0 2rem' }}
         />

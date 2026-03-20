@@ -19,7 +19,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative overflow-hidden py-20">
-      <img src={`${BP}/images/getintouch.jpg`} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
+      <img src={`${BP}/images/getintouch.webp`} alt="" aria-hidden="true" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0" style={{ background: 'rgba(253,250,249,0.88)' }} />
 
       <div className="relative max-w-6xl mx-auto px-6">

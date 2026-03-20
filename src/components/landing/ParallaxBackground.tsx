@@ -26,7 +26,7 @@ export default function ParallaxBackground() {
       aria-hidden="true"
       className="fixed inset-0 pointer-events-none"
       style={{
-        backgroundImage: `url(${BP}/images/background.jpg)`,
+        backgroundImage: `url(${BP}/images/background.webp)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         opacity: 0.55,

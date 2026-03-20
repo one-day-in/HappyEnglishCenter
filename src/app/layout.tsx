@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { LanguageProvider } from "@/lib/i18n/LanguageContext"
 import { SmoothScrollPatch } from "@/components/SmoothScrollPatch"
+import { PageLoader } from "@/components/PageLoader"
 
 const inter = Inter({
   subsets: ["latin", "vietnamese"],
@@ -21,9 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
+      <head>
+        <link rel="preload" as="image" href="/HappyEnglishCenter/images/background.webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/HappyEnglishCenter/images/rating.webp" />
+      </head>
       <body className={`${inter.variable} antialiased bg-background text-foreground`}>
         <LanguageProvider>
           <SmoothScrollPatch />
+          <PageLoader />
           {children}
         </LanguageProvider>
       </body>

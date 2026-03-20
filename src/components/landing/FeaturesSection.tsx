@@ -22,9 +22,10 @@ export default function FeaturesSection() {
     <section id="about" className="relative overflow-hidden py-20">
       {/* Background photo */}
       <img
-        src={`${BP}/images/everything.jpg`}
+        src={`${BP}/images/everything.webp`}
         alt=""
         aria-hidden="true"
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Light overlay so cards remain readable */}

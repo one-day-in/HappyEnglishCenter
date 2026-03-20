@@ -93,8 +93,10 @@ export default function HeroSection() {
           <div className="relative hidden lg:block">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ aspectRatio: '4/3' }}>
               <img
-                src={`${BP}/images/rating.jpg`}
+                src={`${BP}/images/rating.webp`}
                 alt="Students learning English at Happy English Center"
+                loading="eager"
+                fetchPriority="high"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0" style={{ background: 'rgba(107,58,58,0.06)' }} />

@@ -17,7 +17,7 @@ export default function CoursesSection() {
       age: t.courses.c1Age,
       desc: t.courses.c1Desc,
       featured: false,
-      image: '/images/pre-k.jpg',
+      image: '/images/pre-k.webp',
       imageAlt: 'Teacher reading with young students',
     },
     {
@@ -26,7 +26,7 @@ export default function CoursesSection() {
       age: t.courses.c2Age,
       desc: t.courses.c2Desc,
       featured: true,
-      image: '/images/teens.jpg',
+      image: '/images/teens.webp',
       imageAlt: 'Teen student in class',
     },
     {
@@ -35,7 +35,7 @@ export default function CoursesSection() {
       age: t.courses.c3Age,
       desc: t.courses.c3Desc,
       featured: false,
-      image: '/images/adults.jpg',
+      image: '/images/adults.webp',
       imageAlt: 'Adult student studying with books',
     },
   ]
@@ -66,7 +66,7 @@ export default function CoursesSection() {
               }`}
             >
               <div className="relative h-48 overflow-hidden">
-                <img src={`${BP}${course.image}`} alt={course.imageAlt} className="w-full h-full object-cover" />
+                <img src={`${BP}${course.image}`} alt={course.imageAlt} loading="lazy" className="w-full h-full object-cover" />
                 <div className="absolute inset-0" style={{ background: 'rgba(107,58,58,0.10)' }} />
                 {course.featured && (
                   <div className="absolute top-0 inset-x-0 bg-primary text-white text-center text-xs font-medium uppercase tracking-[0.12em] py-2">

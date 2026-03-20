@@ -11,7 +11,7 @@ export default function CtaSection() {
 
   return (
     <section className="relative overflow-hidden py-24">
-      <img src={`${BP}/images/book-trial.jpg`} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
+      <img src={`${BP}/images/book-trial.webp`} alt="" aria-hidden="true" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0" style={{ background: 'rgba(74,20,20,0.82)' }} />
       <div aria-hidden="true" className="absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full blur-3xl pointer-events-none" style={{ background: '#fff', opacity: 0.04 }} />
       <div aria-hidden="true" className="absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full blur-3xl pointer-events-none" style={{ background: '#fff', opacity: 0.03 }} />
