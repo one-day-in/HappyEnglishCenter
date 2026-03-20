@@ -30,7 +30,7 @@ export function PageLoader() {
       <img
         src={`${BP}/images/logo.svg`}
         alt="Happy English Center"
-        className="h-32 w-auto select-none"
+        className="h-16 w-auto select-none"
       />
 
       {/* Animated dots */}
