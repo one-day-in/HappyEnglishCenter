@@ -25,13 +25,12 @@ export function PageLoader() {
         opacity: fading ? 0 : 1,
       }}
     >
-      {/* Logo mark */}
-      <div
-        className="w-16 h-16 rounded-2xl flex items-center justify-center text-white text-4xl font-light select-none"
-        style={{ background: '#6B3A3A', fontFamily: 'Georgia, serif' }}
-      >
-        h
-      </div>
+      {/* Full logo */}
+      <img
+        src="/HappyEnglishCenter/images/logo.svg"
+        alt="Happy English Center"
+        className="h-10 w-auto select-none"
+      />
 
       {/* Animated dots */}
       <div className="flex gap-2">
