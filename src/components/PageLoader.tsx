@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { BP } from '@/lib/asset'
 
 export function PageLoader() {
   const [visible, setVisible] = useState(true)
@@ -27,7 +28,7 @@ export function PageLoader() {
     >
       {/* Full logo */}
       <img
-        src="/HappyEnglishCenter/images/logo.svg"
+        src={`${BP}/images/logo.svg`}
         alt="Happy English Center"
         className="h-10 w-auto select-none"
       />
