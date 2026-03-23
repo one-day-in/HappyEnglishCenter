@@ -146,6 +146,17 @@ export const en = {
     pKet: 'Cambridge KET',
     pPet: 'Cambridge PET',
   },
+  cabinet: {
+    menu: 'Menu',
+    home: 'Home',
+    schedule: 'Schedule',
+    materials: 'Materials',
+    overview: 'Overview',
+    management: 'Management',
+    homework: 'Homework',
+    staff: 'Staff',
+    backToOverview: 'Overview',
+  },
 }
 
 export const vi: typeof en = {
@@ -293,6 +304,17 @@ export const vi: typeof en = {
     pAdults: 'Người lớn (18+)',
     pKet: 'Cambridge KET',
     pPet: 'Cambridge PET',
+  },
+  cabinet: {
+    menu: 'Menu',
+    home: 'Trang chủ',
+    schedule: 'Lịch học',
+    materials: 'Tài liệu',
+    overview: 'Tổng quan',
+    management: 'Quản lý',
+    homework: 'Bài tập',
+    staff: 'Nhân viên',
+    backToOverview: 'Tổng quan',
   },
 }
 

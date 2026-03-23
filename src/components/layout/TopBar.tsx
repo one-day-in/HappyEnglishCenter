@@ -13,6 +13,9 @@ const pageInfo: Record<string, { title: string; sub: string }> = {
   '/homework/create':{ title: 'Create Homework',  sub: 'Add a new assignment'          },
   '/admin/groups':   { title: 'Groups',           sub: 'Manage student groups'         },
   '/admin/schedule': { title: 'Manage Schedule',  sub: 'Edit weekly timetable'         },
+  '/admin':          { title: 'Overview',         sub: 'Admin panel summary'           },
+  '/admin/homework': { title: 'Homework',         sub: 'Manage all assignments'        },
+  '/materials':      { title: 'Materials',        sub: 'Lesson resources'              },
 }
 
 interface TopBarProps {

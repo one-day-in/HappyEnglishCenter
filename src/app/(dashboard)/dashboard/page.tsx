@@ -1,3 +1,8 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import { getSession } from '@/lib/auth'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Calendar, BookOpen, CheckCircle2, Clock, Circle, Star, TrendingUp } from 'lucide-react'
@@ -11,8 +16,6 @@ const today = new Date()
 const todayDow = today.getDay() === 0 ? 7 : today.getDay()
 
 const studentGroup = mockGroups.find(g => g.id === STUDENT_GROUP_ID)
-
-// Today's and next lesson
 const todaySlots = mockSchedule.filter(s => s.group_id === STUDENT_GROUP_ID && s.day_of_week === todayDow)
 
 const upcomingSlot = (() => {
@@ -24,7 +27,6 @@ const upcomingSlot = (() => {
   return null
 })()
 
-// Homework for student's group
 const myHomework = mockHomework.filter(hw => hw.group_id === STUDENT_GROUP_ID)
 const completedIds = new Set(mockCompletions.filter(c => c.student_id === STUDENT_ID).map(c => c.homework_id))
 const pendingHw = myHomework.filter(hw => !completedIds.has(hw.id))
@@ -43,6 +45,15 @@ const greeting = (() => {
 })()
 
 export default function DashboardPage() {
+  const router = useRouter()
+
+  useEffect(() => {
+    const session = getSession()
+    if (!session) return
+    if (session.role === 'admin') router.replace('/admin')
+    else if (session.role === 'teacher') router.replace('/schedule')
+  }, [router])
+
   return (
     <div className="space-y-6 max-w-4xl">
 
@@ -179,11 +190,9 @@ export default function DashboardPage() {
                   <div
                     key={hw.id}
                     className={`flex items-start gap-3 p-3 rounded-xl border transition-colors ${
-                      done
-                        ? 'bg-emerald-50/60 border-emerald-100'
-                        : overdue
-                        ? 'bg-red-50/60 border-red-100'
-                        : 'bg-muted/40 border-border'
+                      done ? 'bg-emerald-50/60 border-emerald-100'
+                      : overdue ? 'bg-red-50/60 border-red-100'
+                      : 'bg-muted/40 border-border'
                     }`}
                   >
                     {done
