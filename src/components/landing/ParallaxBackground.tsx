@@ -7,17 +7,25 @@ export default function ParallaxBackground() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleScroll = () => {
+    const update = () => {
       if (!ref.current) return
-      const scrollY = window.scrollY
-      // Visible at top (0.35), fades out by 700px scroll
+      // visualViewport.pageTop is accurate on iOS Safari when toolbar hides/shows
+      const scrollY = window.visualViewport?.pageTop ?? window.scrollY
       const opacity = Math.max(0, 0.55 * (1 - scrollY / 700))
       ref.current.style.opacity = String(opacity)
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', update, { passive: true })
+    // Fires when iOS Safari toolbar shows/hides (changes viewport size)
+    window.visualViewport?.addEventListener('resize', update)
+    window.visualViewport?.addEventListener('scroll', update)
+    update()
+
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.visualViewport?.removeEventListener('resize', update)
+      window.visualViewport?.removeEventListener('scroll', update)
+    }
   }, [])
 
   return (
@@ -31,6 +39,9 @@ export default function ParallaxBackground() {
         backgroundPosition: 'center',
         opacity: 0.55,
         zIndex: 0,
+        // Force GPU layer — prevents iOS Safari repaint glitch on toolbar toggle
+        transform: 'translateZ(0)',
+        willChange: 'opacity',
       }}
     />
   )
